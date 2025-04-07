@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
 @import './base.css';
-@import "tailwindcss";
+@import 'tailwindcss';
+@font-face {
+  font-family: DigitalDisco;
+  src: url(../components/font/DigitalDisco.ttf) format('truetype');
+}
+
+@theme {
+  --color-purpur: #6a58b0;
+  --color-almost-white: #fdfdfd;
+  --color-pinky-pink: #f2d5f8;
+  --color-dark-green: #7d7c68;
+  --color-dark-blue: #687d9d;
+  --color-light-blue: #a7c2e9;
+}
 
 #app {
   max-width: 1280px;
@@ -22,7 +36,7 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
@@ -33,4 +47,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */

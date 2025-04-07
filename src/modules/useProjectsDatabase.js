@@ -44,7 +44,11 @@ export const useProjectsDatabase = () => {
     },
     {
       id: 4,
-      name: '',
+      name: 'EASV Commercial',
+      photo: 'https://picsum.photos/400/600',
+      description: 'Commercial project for EASV.',
+      date: '2024-12-01',
+      technologies: ['Final Cut Pro'],
     },
   ])
 
