@@ -93,3 +93,7 @@ body {
 .windowTitle {
   font-family: 'DigitalDisco', sans-serif;
 }
+
+h1 {
+  font-size: 20px;
+}
