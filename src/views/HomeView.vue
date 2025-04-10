@@ -1,9 +1,12 @@
 <script setup>
+/* import { createDraggable } from 'animejs';
+
+createDraggable('.window'); */
 </script>
 
 <template>
   <main>
-    <section class="bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-130">
+    <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-130">
       <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
@@ -22,17 +25,18 @@
 
         In my spare time I create my own music, study Japanese for fun, and rot in my bed.</p>
     </section>
-    <section class="bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue w-130">
+    <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue w-130">
       <div class="pixelFont bg-light-blue rounded-t-[21px] border-b-3 pl-3 flex pt-2">
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <p class="!-mt-[3px] !mb-0.5 !ml-2.5">about_me.txt</p>
       </div>
-      <p class="p-4 pt-4 pt-0">Test test knap :D</p>
+      <p class="p-4 pt-4">Test test knap :D</p>
       <div class="pb-3 flex justify-end px-4">
-        <button class="bg-almost-white rounded-2xl border-3 border-dark-blue px-3 py-1 pixelFont">click me</button>
-        <button class="bg-almost-white rounded-2xl border-3 border-dark-blue px-3 py-1 pixelFont">don't click
+        <button class="bg-almost-white rounded-2xl border-3 border-dark-blue px-3 py-1 !mx-1 pixelFont">click
+          me</button>
+        <button class="bg-almost-white rounded-2xl border-3 border-dark-blue px-3 py-1 !mx-1 pixelFont">don't click
           me</button>
       </div>
 

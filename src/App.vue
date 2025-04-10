@@ -3,11 +3,14 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
+  <header class="">
+    <div class="wrapper flex justify-center pb-4">
+      <nav
+        class="bg-almost-white rounded-3xl text-dark-blue border-3 border-purpur h-12 w-1/2 flex justify-between items-center px-10">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/projects">Projects</RouterLink>
+        <RouterLink to="/music">Music</RouterLink>
       </nav>
     </div>
   </header>
@@ -17,8 +20,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  /*   line-height: 1.5; */
+  /*   max-height: 100vh; */
 }
 
 .logo {
@@ -27,24 +30,24 @@ header {
 }
 
 nav {
-  width: 100%;
+  /*   width: 100%; */
   font-size: 12px;
   text-align: center;
   /* margin-top: 2rem; */
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(--color-pinky-pink);
 }
 
-nav a.router-link-exact-active:hover {
+/* nav a.router-link-exact-active:hover {
   background-color: transparent;
-}
+} */
 
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  /*   border-left: 1px solid var(--color-border); */
 }
 
 nav a:first-of-type {
