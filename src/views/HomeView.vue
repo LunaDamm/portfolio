@@ -1,7 +1,10 @@
 <script setup>
-/* import { createDraggable } from 'animejs';
+import { createDraggable } from 'animejs';
+import { onMounted } from 'vue';
 
-createDraggable('.window'); */
+onMounted(() => {
+  createDraggable('.window');
+});
 </script>
 
 <template>
@@ -34,12 +37,13 @@ createDraggable('.window'); */
       </div>
       <p class="p-4 pt-4">Test test knap :D</p>
       <div class="pb-3 flex justify-end px-4">
-        <button class="bg-almost-white rounded-2xl border-3 border-dark-blue px-3 py-1 !mx-1 pixelFont">click
+        <button
+          class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">click
           me</button>
-        <button class="bg-almost-white rounded-2xl border-3 border-dark-blue px-3 py-1 !mx-1 pixelFont">don't click
-          me</button>
+        <button
+          class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">don't
+          click me</button>
       </div>
-
     </section>
   </main>
 </template>

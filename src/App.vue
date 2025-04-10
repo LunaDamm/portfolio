@@ -19,10 +19,10 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-header {
-  /*   line-height: 1.5; */
-  /*   max-height: 100vh; */
-}
+/* header {
+     line-height: 1.5;
+     max-height: 100vh;
+} */
 
 .logo {
   display: block;
@@ -53,6 +53,8 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
+
+
 
 
 @media (min-width: 1024px) {
