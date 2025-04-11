@@ -5,7 +5,7 @@ export const useProjectsDatabase = () => {
     {
       id: 1,
       name: 'Reaching for the Stars',
-      photo: 'https://picsum.photos/400/600',
+      photo: '../components/image/stars.png',
       description:
         'Photo of a night sky with stars and a silhouette of a person reaching for them.',
       date: '2024-10-27',

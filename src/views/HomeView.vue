@@ -18,7 +18,7 @@ onMounted(() => {
       </div>
 
       <h1 class="text-purpur pl-4 pt-4 pb-2 text-3xl font-bold">
-        <i>Hiya, I’m Lunas</i>
+        <i>Hiya, I’m Luna</i>
       </h1>
       <p class="p-4 pt-0">I’m a multimedia designer at EASV, who likes to create, design, and code. During my time
         there and
