@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <p class="!-mt-[3px] !mb-0.5 !ml-2.5">Finder.app</p>
+        <p class="!-mt-[3px] !mb-0.5 !ml-2.5">Pathfinder.app</p>
       </div>
       <div class="flex">
         <div class="h-full w-1/5">
