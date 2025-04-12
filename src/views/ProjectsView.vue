@@ -1,6 +1,5 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
 </script>
 
 <template>
@@ -14,7 +13,6 @@ import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
       </div>
       <div class="flex">
         <div class="h-full w-1/5">
-          <FontAwesomeIcon :icon="byPrefixAndName.fas['house']" />
         </div>
         <div class="h-90 border-l-3 w-4/5">
 
