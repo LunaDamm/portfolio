@@ -4,6 +4,7 @@ export const useProjectsDatabase = () => {
   const projects = ref([
     {
       id: 1,
+      type: 'photo',
       name: 'Reaching for the Stars',
       photo: '../components/image/stars.png',
       description:
@@ -13,6 +14,7 @@ export const useProjectsDatabase = () => {
     },
     {
       id: 2,
+      type: 'project',
       name: 'CocioSummerClash',
       photo: 'https://picsum.photos/400/600',
       description: 'Project CocioSummerClash is a hypothetical summer event in Esbjerg, Denmark.',
@@ -28,6 +30,7 @@ export const useProjectsDatabase = () => {
     },
     {
       id: 3,
+      type: 'project',
       name: 'Global Plastic Treaty',
       photo: 'https://picsum.photos/400/600',
       description: 'Exam Project on the Global Plastic Treaty.',
@@ -44,6 +47,7 @@ export const useProjectsDatabase = () => {
     },
     {
       id: 4,
+      type: 'project',
       name: 'EASV Commercial',
       photo: 'https://picsum.photos/400/600',
       description: 'Commercial project for EASV.',
