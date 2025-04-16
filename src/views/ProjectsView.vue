@@ -1,7 +1,3 @@
-<script setup>
-/* import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome' */
-</script>
-
 <template>
   <div>
     <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-160 h-100">
@@ -36,33 +32,12 @@
         </div>
         <div class="h-90 border-l-3 w-4/5">
           <!-- repeat projects thumbnail -->
-          <div class="flex flex-wrap p-1">
-            <div class="w-1/4 h-1/4 p-2">
-              <img src="../components/image/stars.png" alt="Project Thumbnail"
-                class="rounded-2xl w-full h-full object-cover" />
-              <p class="w-full text-center">stars.proj</p>
-            </div>
-            <div class="w-1/4 h-1/4 p-2">
-              <img src="../components/image/background.jpg" alt="Project Thumbnail"
-                class="rounded-2xl w-full h-full object-cover" />
-              <p class="w-full text-center">cocio.proj</p>
-            </div>
-            <div class="w-1/4 h-1/4 p-2">
-              <img src="../components/image/stars.png" alt="Project Thumbnail"
-                class="rounded-2xl w-full h-full object-cover" />
-              <p class="w-full text-center">plastic.proj</p>
-            </div>
-            <div class="w-1/4 h-1/4 p-2">
-              <img src="../components/image/stars.png" alt="Project Thumbnail"
-                class="rounded-2xl w-full h-full object-cover" />
-              <p class="w-full text-center">easv-com.proj</p>
-            </div>
-            <div class="w-1/4 h-1/4 p-2">
-              <img src="../components/image/stars.png" alt="Project Thumbnail"
-                class="rounded-2xl w-full h-full object-cover" />
-              <p class="w-full text-center">doggie.png</p>
-            </div>
-
+          <div class="flex flex-wrap p-2">
+            <router-link :to="`/projects/${project.id}`" class="w-1/4 h-1/4" v-for="project in projects" :key="project">
+              <img :src="project.photo" alt="Project Thumbnail"
+                class="rounded-2xl w-full h-full object-cover aspect-3/2" />
+              <p class="w-full text-center">{{ project.filename }}</p>
+            </router-link>
           </div>
         </div>
       </div>
@@ -70,6 +45,33 @@
   </div>
 </template>
 
+<script setup>
+import { ref, computed } from 'vue';
 
+import { useProjectsDatabase } from '@/modules/useProjectsDatabase';
+
+const { projects } = useProjectsDatabase();
+
+const selectedType = ref('')
+
+const filteredProjects = computed(() => {
+  let result = selectedType.value
+    ? projects.filter((project) => project.type === selectedType.value)
+    : projects;
+  return result;
+});
+
+/* let isProjectDataVisible = ref([])
+
+const toggleProjectData = (index) => {
+  isProjectDataVisible.value = !isProjectDataVisible.value;
+  console.log('Project data toggled for index:', index);
+}; */
+
+console.log(projects);
+
+console.log(filteredProjects.value);
+
+</script>
 
 <style lang="scss" scoped></style>
