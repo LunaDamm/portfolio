@@ -27,6 +27,11 @@ const router = createRouter({
       name: 'music',
       component: () => import('../views/MusicView.vue'),
     },
+    {
+      path: '/projects/:id',
+      name: 'projectDetails',
+      component: () => import('../views/ProjectDetails.vue'),
+    },
   ],
 })
 

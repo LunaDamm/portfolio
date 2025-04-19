@@ -7,7 +7,7 @@ export const useProjectsDatabase = () => {
       type: 'photo',
       filename: 'stars.png',
       name: 'Reaching for the Stars',
-      photo: 'images/stars.png',
+      photo: '/images/stars.png',
       description:
         'Photo of a night sky with stars and a silhouette of a person reaching for them.',
       date: '2024-10-27',
