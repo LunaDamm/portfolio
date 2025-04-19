@@ -1,41 +1,57 @@
 <template>
   <div>
-    <div>
+    <router-link to="/projects">
       <button
-        class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">
+        class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont text-color-dark-blue">
         back
       </button>
-    </div>
-    <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-200">
-      <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
-        <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <p class="!-mt-[3px] !mb-0.5 !ml-2.5"> {{ project.filename }}</p>
-      </div>
-      <img :src="project.photo" alt="" class="rounded-b-[21px] w-full h-1/2 object-cover" />
-    </section>
-    <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue w-130">
-      <div class="pixelFont bg-light-blue rounded-t-[21px] border-b-3 pl-3 flex pt-2">
-        <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
-        <p class="!-mt-[3px] !mb-0.5 !ml-2.5">about.txt</p>
-      </div>
-      <h1 class="px-4 pt-4 font-bold">{{ project.name }}</h1>
-      <p class="px-4 py-2">
-        {{ project.description }} <br>
-        {{ project.date }}
-      </p>
-      <div class="pb-3 flex px-4 justify-between">
+    </router-link>
+    <div class="flex">
+      <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-200">
+        <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
+          <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
+          <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
+          <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
+          <p class="!-mt-[3px] !mb-0.5 !ml-2.5"> {{ project.filename }}{{ project.fileExtension }}</p>
+        </div>
+        <img :src="project.photo" alt="" class="rounded-b-[21px] w-full object-cover" />
+      </section>
+      <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue w-130">
+        <div class="pixelFont bg-light-blue rounded-t-[21px] border-b-3 pl-3 flex pt-2">
+          <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
+          <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
+          <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
+          <p class="!-mt-[3px] !mb-0.5 !ml-2.5">about_{{ project.filename }}.txt</p>
+        </div>
+        <div class="px-4 py-4">
+          <h1 class="font-bold">{{ project.name }}</h1>
+          <p class="pt-2">
+            {{ project.description }}
+          </p>
+          <p class="pt-2">Made with:</p>
+          <div class="grid grid-cols-3 gap-2 justify-items-center">
+            <img class="size-12" v-for="technologyIcon in project.technologiesIcons" :key="technologyIcon"
+              :src="technologyIcon" alt="">
+          </div>
+          <div class="grid grid-cols-3 gap-2 justify-center">
+            <p class="italic text-center" v-for="technology in project.technologies" :key="technology"> {{
+              technology }}
+            </p>
+          </div>
+          <p class="pt-2">
+            {{ project.date }}
+          </p>
+        </div>
+        <!-- <div class="pb-3 flex px-4 justify-between">
         <button
           class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">
           ldft </button>
         <button
           class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">
           right </button>
-      </div>
-    </section>
+      </div> -->
+      </section>
+    </div>
   </div>
 </template>
 

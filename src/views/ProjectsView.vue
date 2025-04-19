@@ -36,7 +36,7 @@
             <router-link :to="`/projects/${project.id}`" class="w-1/4 h-1/4" v-for="project in projects" :key="project">
               <img :src="project.photo" alt="Project Thumbnail"
                 class="rounded-2xl w-full h-full object-cover aspect-3/2" />
-              <p class="w-full text-center">{{ project.filename }}</p>
+              <p class="w-full text-center">{{ project.filename }}{{ project.fileExtension }}</p>
             </router-link>
           </div>
         </div>
