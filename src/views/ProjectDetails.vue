@@ -28,19 +28,17 @@
           <p class="pt-2">
             {{ project.description }}
           </p>
-          <p class="pt-2">Made with:</p>
-          <div class="grid grid-cols-3 gap-2 justify-items-center">
-            <img class="size-12" v-for="technologyIcon in project.technologiesIcons" :key="technologyIcon"
-              :src="technologyIcon" alt="">
-          </div>
-          <div class="grid grid-cols-3 gap-2 justify-center">
-            <p class="italic text-center" v-for="technology in project.technologies" :key="technology"> {{
-              technology }}
-            </p>
-          </div>
           <p class="pt-2">
             {{ project.date }}
           </p>
+          <p class="pt-2">Made with:</p>
+          <div class="grid grid-cols-3 gap-4 justify-items-center pt-2">
+            <div v-for="(technology, index) in combinedTechnologies" :key="index"
+              class="grid justify-items-center w-full">
+              <img class="size-12" :src="technology.icon" alt="" />
+              <p class="italic">{{ technology.name }}</p>
+            </div>
+          </div>
         </div>
         <!-- <div class="pb-3 flex px-4 justify-between">
         <button
@@ -65,6 +63,14 @@ const route = useRoute();
 const project = computed(() => {
   return projects.value.find((p) => p.id === parseInt(route.params.id));
 })
+
+const combinedTechnologies = computed(() => {
+  if (!project.value) return [];
+  return project.value.technologiesIcons.map((icon, index) => ({
+    icon,
+    name: project.value.technologies[index],
+  }));
+});
 
 
 </script>
