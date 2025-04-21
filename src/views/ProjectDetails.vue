@@ -6,8 +6,8 @@
         back
       </button>
     </router-link>
-    <div class="flex">
-      <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-200">
+    <div class="md:flex">
+      <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur md:w-200">
         <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
           <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
           <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
@@ -16,7 +16,7 @@
         </div>
         <img :src="project.photo" alt="" class="rounded-b-[21px] w-full object-cover" />
       </section>
-      <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue w-130">
+      <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue md:w-130">
         <div class="pixelFont bg-light-blue rounded-t-[21px] border-b-3 pl-3 flex pt-2">
           <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
           <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
@@ -32,7 +32,7 @@
             {{ project.date }}
           </p>
           <p class="pt-2">Made with:</p>
-          <div class="grid grid-cols-3 gap-4 justify-items-center pt-2">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center pt-2">
             <div v-for="(technology, index) in combinedTechnologies" :key="index"
               class="grid justify-items-center w-full">
               <img class="size-12" :src="technology.icon" alt="" />
@@ -64,6 +64,7 @@ const project = computed(() => {
   return projects.value.find((p) => p.id === parseInt(route.params.id));
 })
 
+// Help from ChatGPT, combining technologies and icons into an array of objects
 const combinedTechnologies = computed(() => {
   if (!project.value) return [];
   return project.value.technologiesIcons.map((icon, index) => ({

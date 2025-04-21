@@ -1,39 +1,37 @@
 <template>
   <div>
-    <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur w-160 h-100">
+    <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur md:w-160 md:h-100">
       <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <p class="!-mt-[3px] !mb-0.5 !ml-2.5">Pathfinder.app</p>
       </div>
-      <div class="flex">
-        <div class="h-full w-1/5">
-          <div class="pt-2 pl-3 flex items-center">
+      <div class="md:flex w-full">
+        <div
+          class="flex flex-wrap md:grid h-full md:w-1/5 pt-2 pl-3 w-full md:pb-0 pb-2 md:border-b-0 border-b-3 border-purpur">
+          <div class="flex items-center p-2">
             <font-awesome-icon icon="fa-solid fa-folder" />
-            <font-awesome-icon :icon="['fas', 'user-secret']" />
             <p class="pl-2">all</p>
           </div>
-          <div class="pt-2 pl-3 flex items-center">
+          <div class="md:pt-1 flex items-center p-2">
             <font-awesome-icon icon="fa-solid fa-sheet-plastic" />
-            <font-awesome-icon :icon="['fas', 'user-secret']" />
             <p class="pl-2">projects</p>
           </div>
-          <div class="pt-2 pl-3 flex items-center">
+          <div class="md:pt-1 flex items-center p-2">
             <font-awesome-icon icon="fa-solid fa-camera" />
-            <font-awesome-icon :icon="['fas', 'user-secret']" />
             <p class="pl-2">images</p>
           </div>
-          <div class="pt-2 pl-3 flex items-center">
-            <font-awesome-icon :icon="['fas', 'music']" />
-            <font-awesome-icon :icon="['fas', 'user-secret']" />
+          <div class="md:pt-1 flex items-center p-2">
+            <font-awesome-icon icon="fa-solid fa-music" />
             <p class="pl-2">musics</p>
           </div>
         </div>
-        <div class="h-90 border-l-3 w-4/5">
+        <div class="h-90 border-l-0 md:border-l-3 w-full md:w-4/5">
           <!-- repeat projects thumbnail -->
           <div class="flex flex-wrap p-2">
-            <router-link :to="`/projects/${project.id}`" class="w-1/4 h-1/4" v-for="project in projects" :key="project">
+            <router-link :to="`/projects/${project.id}`" class=":w-1/4 sm:h-1/4 w-1/3 h-1/3" v-for="project in projects"
+              :key="project.id">
               <img :src="project.photo" alt="Project Thumbnail"
                 class="rounded-2xl w-full h-full object-cover aspect-3/2" />
               <p class="w-full text-center">{{ project.filename }}{{ project.fileExtension }}</p>
@@ -58,6 +56,7 @@ const filteredProjects = computed(() => {
   let result = selectedType.value
     ? projects.filter((project) => project.type === selectedType.value)
     : projects;
+  console.log('Filtered projects:', result); //debug
   return result;
 });
 

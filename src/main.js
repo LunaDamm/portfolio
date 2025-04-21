@@ -11,10 +11,22 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import {
+  faCamera,
+  faFolder,
+  faHouse,
+  faMusic,
+  faSheetPlastic,
+} from '@fortawesome/free-solid-svg-icons'
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret)
+library.add(faMusic)
+library.add(faCamera)
+library.add(faSheetPlastic)
+library.add(faFolder)
+library.add(faAddressCard)
+library.add(faHouse)
 
 const app = createApp(App)
 

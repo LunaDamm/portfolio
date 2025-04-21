@@ -6,11 +6,12 @@ import { RouterLink, RouterView } from 'vue-router'
   <header class="">
     <div class="wrapper flex justify-center pb-4">
       <nav
-        class="bg-almost-white rounded-3xl text-dark-blue border-3 border-purpur h-12 w-1/2 flex justify-between items-center px-10">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
-        <RouterLink to="/music">Music</RouterLink>
+        class="bg-almost-white rounded-3xl text-dark-blue border-3 border-purpur h-12 flex justify-center gap-x-5 px-6 items-center">
+        <RouterLink to="/"><font-awesome-icon icon="fa-solid fa-house" class="text-2xl" /></RouterLink>
+        <RouterLink to="/about"><font-awesome-icon icon="fa-regular fa-address-card" class="text-2xl" />
+        </RouterLink>
+        <RouterLink to="/projects"><font-awesome-icon icon="fa-solid fa-sheet-plastic" class="text-2xl" />
+        </RouterLink>
       </nav>
     </div>
   </header>
