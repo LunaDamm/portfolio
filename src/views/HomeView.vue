@@ -49,7 +49,7 @@ onMounted(() => {
         <a href="https://www.linkedin.com/in/lunadamm/" class="!text-dark-blue">
           <button
             class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">linkedin</button></a>
-        <a href="https://www.youtube.com/@LunaDamm" class="!text-dark-blue">
+        <a href="https://www.youtube.com/watch?v=NBe3IBCMDoc" class="!text-dark-blue">
           <button
             class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">youtube</button></a>
       </div>

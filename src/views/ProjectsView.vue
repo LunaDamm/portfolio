@@ -10,28 +10,28 @@
       <div class="md:flex w-full">
         <div
           class="flex flex-wrap md:grid h-full md:w-1/5 pt-2 pl-3 w-full md:pb-0 pb-2 md:border-b-0 border-b-3 border-purpur">
-          <div class="flex items-center p-2">
+          <button class="flex items-center p-2 hover:text-pinky-pink" @click="selectedType = ''">
             <font-awesome-icon icon="fa-solid fa-folder" />
             <p class="pl-2">all</p>
-          </div>
-          <div class="md:pt-1 flex items-center p-2">
+          </button>
+          <button class="md:pt-1 flex items-center p-2 hover:text-pinky-pink" @click="selectedType = 'project'">
             <font-awesome-icon icon="fa-solid fa-sheet-plastic" />
             <p class="pl-2">projects</p>
-          </div>
-          <div class="md:pt-1 flex items-center p-2">
+          </button>
+          <button class="md:pt-1 flex items-center p-2 hover:text-pinky-pink" @click="selectedType = 'photo'">
             <font-awesome-icon icon="fa-solid fa-camera" />
             <p class="pl-2">images</p>
-          </div>
-          <div class="md:pt-1 flex items-center p-2">
+          </button>
+          <button class="md:pt-1 flex items-center p-2 hover:text-pinky-pink" @click="selectedType = 'music'">
             <font-awesome-icon icon="fa-solid fa-music" />
             <p class="pl-2">musics</p>
-          </div>
+          </button>
         </div>
         <div class="h-90 border-l-0 md:border-l-3 w-full md:w-4/5">
           <!-- repeat projects thumbnail -->
           <div class="flex flex-wrap p-2">
             <router-link :to="`/projects/${project.id}`" class="sm:w-1/4 sm:h-1/4 w-1/3 h-1/3"
-              v-for="project in projects" :key="project.id">
+              v-for="project in filteredProjects" :key="project.id">
               <img :src="project.photo" alt="Project Thumbnail"
                 class="rounded-2xl w-full h-full object-cover aspect-3/2" />
               <p class="w-full text-center">{{ project.filename }}{{ project.fileExtension }}</p>
@@ -52,12 +52,19 @@ const { projects } = useProjectsDatabase();
 
 const selectedType = ref('')
 
-const filteredProjects = computed(() => {
+/* const filteredProjects = computed(() => {
   let result = selectedType.value
     ? projects.filter((project) => project.type === selectedType.value)
-    : projects;
+    : projects.value;
   console.log('Filtered projects:', result); //debug
   return result;
+}); */
+
+// Computed property to filter projects based on the selected type
+const filteredProjects = computed(() => {
+  return selectedType.value
+    ? projects.value.filter((project) => project.type === selectedType.value)
+    : projects.value;
 });
 
 /* let isProjectDataVisible = ref([])

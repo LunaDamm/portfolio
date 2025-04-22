@@ -24,7 +24,7 @@ export const useProjectsDatabase = () => {
       filename: 'cocio',
       fileExtension: '.proj',
       name: 'CocioSummerClash',
-      photo: 'https://picsum.photos/600/400',
+      photo: '/images/cocio.jpeg',
       description: 'Project CocioSummerClash is a hypothetical summer event in Esbjerg, Denmark.',
       date: '2025-04-04',
       technologies: [
@@ -43,6 +43,7 @@ export const useProjectsDatabase = () => {
         '/icons/final_cut_pro.png',
         '/icons/logic_pro.png',
       ],
+      link: 'https://www.youtube.com/watch?v=SWksdUOmnpI',
     },
     {
       id: 3,
@@ -50,7 +51,7 @@ export const useProjectsDatabase = () => {
       filename: 'treaty',
       fileExtension: '.proj',
       name: 'Global Plastic Treaty',
-      photo: 'https://picsum.photos/602/400',
+      photo: '/images/gpt.png',
       description: 'Exam Project on the Global Plastic Treaty.',
       date: '2025-01-15',
       technologies: [
@@ -71,6 +72,7 @@ export const useProjectsDatabase = () => {
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-plain.svg',
         '/icons/final_cut_pro.png',
       ],
+      link: 'https://lunadamm.github.io/plastic-webpage/',
     },
     {
       id: 4,
@@ -83,6 +85,7 @@ export const useProjectsDatabase = () => {
       date: '2024-12-01',
       technologies: ['Final Cut Pro'],
       technologiesIcons: ['/icons/final_cut_pro.png'],
+      link: 'https://www.youtube.com/watch?v=kml0o7itwdk',
     },
     {
       id: 5,
@@ -90,11 +93,12 @@ export const useProjectsDatabase = () => {
       filename: 'job',
       fileExtension: '.mp3',
       name: "Lookin' for at Job",
-      photo: 'https://picsum.photos/601/400',
+      photo: '/images/job.png',
       description: 'Music created by me for a job application.',
       date: '2024-12-01',
       technologies: ['Logic Pro'],
       technologiesIcons: ['/icons/logic_pro.png'],
+      link: 'https://youtu.be/xiOZxVNaL3I',
     },
   ])
 

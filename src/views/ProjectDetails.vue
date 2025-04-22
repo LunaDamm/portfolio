@@ -14,7 +14,7 @@
           <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
           <p class="!-mt-[3px] !mb-0.5 !ml-2.5"> {{ project.filename }}{{ project.fileExtension }}</p>
         </div>
-        <img :src="project.photo" alt="" class="rounded-b-[21px] w-full object-cover" />
+        <img :src="project.photo" alt="" class="rounded-b-[21px] w-full object-cover aspect-3/2" />
       </section>
       <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue md:w-130">
         <div class="pixelFont bg-light-blue rounded-t-[21px] border-b-3 pl-3 flex pt-2">
@@ -31,6 +31,7 @@
           <p class="pt-2">
             {{ project.date }}
           </p>
+          <a :href="project.link" class="pt-2">{{ project.link }}</a>
           <p class="pt-2">Made with:</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center pt-2">
             <div v-for="(technology, index) in combinedTechnologies" :key="index"
