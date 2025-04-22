@@ -30,8 +30,8 @@
         <div class="h-90 border-l-0 md:border-l-3 w-full md:w-4/5">
           <!-- repeat projects thumbnail -->
           <div class="flex flex-wrap p-2">
-            <router-link :to="`/projects/${project.id}`" class=":w-1/4 sm:h-1/4 w-1/3 h-1/3" v-for="project in projects"
-              :key="project.id">
+            <router-link :to="`/projects/${project.id}`" class="sm:w-1/4 sm:h-1/4 w-1/3 h-1/3"
+              v-for="project in projects" :key="project.id">
               <img :src="project.photo" alt="Project Thumbnail"
                 class="rounded-2xl w-full h-full object-cover aspect-3/2" />
               <p class="w-full text-center">{{ project.filename }}{{ project.fileExtension }}</p>
@@ -70,6 +70,17 @@ const toggleProjectData = (index) => {
 console.log(projects);
 
 console.log(filteredProjects.value);
+
+import { createDraggable } from 'animejs';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  // Make only the pixelFont divs draggable
+  const draggableElements = document.querySelectorAll('.window');
+  draggableElements.forEach((element) => {
+    createDraggable(element);
+  });
+});
 
 </script>
 
