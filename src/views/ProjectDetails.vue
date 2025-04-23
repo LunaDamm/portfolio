@@ -6,7 +6,7 @@
         back
       </button>
     </router-link>
-    <div class="md:flex">
+    <div class="">
       <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur md:w-200">
         <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
           <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
@@ -32,7 +32,7 @@
             {{ project.date }}
           </p>
           <a :href="project.link" class="pt-2">{{ project.link }}</a>
-          <p class="pt-2">Made with:</p>
+          <p class="pt-2">Made by {{ project.group }}, using:</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center pt-2">
             <div v-for="(technology, index) in combinedTechnologies" :key="index"
               class="grid justify-items-center w-full">
@@ -73,6 +73,17 @@ const combinedTechnologies = computed(() => {
     name: project.value.technologies[index],
   }));
 });
+
+import { createDraggable } from 'animejs';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const draggableElements = document.querySelectorAll('.window');
+  draggableElements.forEach((element) => {
+    createDraggable(element);
+  });
+});
+
 
 
 </script>

@@ -34,7 +34,7 @@
               v-for="project in filteredProjects" :key="project.id">
               <img :src="project.photo" alt="Project Thumbnail"
                 class="rounded-2xl w-full h-full object-cover aspect-3/2" />
-              <p class="w-full text-center">{{ project.filename }}{{ project.fileExtension }}</p>
+              <p class="w-full text-center md:text-base text-sm">{{ project.filename }}{{ project.fileExtension }}</p>
             </router-link>
           </div>
         </div>
@@ -82,7 +82,6 @@ import { createDraggable } from 'animejs';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  // Make only the pixelFont divs draggable
   const draggableElements = document.querySelectorAll('.window');
   draggableElements.forEach((element) => {
     createDraggable(element);

@@ -12,6 +12,7 @@ export const useProjectsDatabase = () => {
       description:
         'Photo of a night sky with stars and a silhouette of a person reaching for them.',
       date: '2024-10-27',
+      group: 'Luna',
       technologies: ['PhotoShop', 'CameraRaw'],
       technologiesIcons: [
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg',
@@ -27,6 +28,7 @@ export const useProjectsDatabase = () => {
       photo: '/images/cocio.jpeg',
       description: 'Project CocioSummerClash is a hypothetical summer event in Esbjerg, Denmark.',
       date: '2025-04-04',
+      group: 'Team Skærebært - Emilie, Mathias, Mikkel & Luna',
       technologies: [
         'PhotoShop',
         'Illustrator',
@@ -54,6 +56,7 @@ export const useProjectsDatabase = () => {
       photo: '/images/gpt.png',
       description: 'Exam Project on the Global Plastic Treaty.',
       date: '2025-01-15',
+      group: 'Team Skærebært - Emilie, Mathias, Mikkel & Luna',
       technologies: [
         'HTML',
         'CSS',
@@ -80,9 +83,10 @@ export const useProjectsDatabase = () => {
       filename: 'easv_com',
       fileExtension: '.proj',
       name: 'EASV Commercial',
-      photo: 'https://picsum.photos/601/400',
+      photo: '/images/easv.jpg',
       description: 'Commercial project for EASV.',
       date: '2024-12-01',
+      group: 'Team Skærebært - Emilie, Mathias, Mikkel & Luna',
       technologies: ['Final Cut Pro'],
       technologiesIcons: ['/icons/final_cut_pro.png'],
       link: 'https://www.youtube.com/watch?v=kml0o7itwdk',
@@ -96,6 +100,7 @@ export const useProjectsDatabase = () => {
       photo: '/images/job.png',
       description: 'Music created by me for a job application.',
       date: '2024-12-01',
+      group: 'Luna',
       technologies: ['Logic Pro'],
       technologiesIcons: ['/icons/logic_pro.png'],
       link: 'https://youtu.be/xiOZxVNaL3I',
