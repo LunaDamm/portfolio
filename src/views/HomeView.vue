@@ -14,7 +14,8 @@ onMounted(() => {
 
 <template>
   <main>
-    <section class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur sm:w-100 w-full">
+    <section
+      class="window bg-almost-white rounded-3xl text-purpur border-3 border-purpur sm:w-100 w-full sm:absolute sm:top-2/6 sm:left-2/6 sm:-translate-x-1/2 sm:-translate-y-1/2 !mb-4">
       <div class="pixelFont bg-pinky-pink rounded-t-[21px] border-b-3 pl-3 flex pt-2">
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
@@ -37,7 +38,8 @@ onMounted(() => {
         </RouterLink>
       </div>
     </section>
-    <section class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue sm:w-130 w-full">
+    <section
+      class="window bg-almost-white rounded-3xl text-dark-blue border-3 border-dark-blue sm:w-130 w-full sm:absolute sm:top-3/6 sm:left-3/6 sm:-translate-x-1/2 sm:-translate-y-1/2">
       <div class="pixelFont bg-light-blue rounded-t-[21px] border-b-3 pl-3 flex pt-2">
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
         <div class="size-4 border-3 rounded-full bg-almost-white !ml-0.5"></div>
