@@ -83,10 +83,13 @@ import { createDraggable } from 'animejs';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  const draggableElements = document.querySelectorAll('.window');
-  draggableElements.forEach((element) => {
-    createDraggable(element);
-  });
+  const isDesktop = window.innerWidth > 640; // Adjust breakpoint as needed
+  if (isDesktop) {
+    const draggableElements = document.querySelectorAll('.window');
+    draggableElements.forEach((element) => {
+      createDraggable(element);
+    });
+  }
 });
 
 </script>

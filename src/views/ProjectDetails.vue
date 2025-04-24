@@ -2,7 +2,7 @@
   <div>
     <router-link to="/projects">
       <button
-        class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont text-color-dark-blue">
+        class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont text-color-dark-blue !mb-4">
         back
       </button>
     </router-link>
@@ -80,10 +80,13 @@ import { createDraggable } from 'animejs';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  const draggableElements = document.querySelectorAll('.window');
-  draggableElements.forEach((element) => {
-    createDraggable(element);
-  });
+  const isDesktop = window.innerWidth > 640; // Adjust breakpoint as needed
+  if (isDesktop) {
+    const draggableElements = document.querySelectorAll('.window');
+    draggableElements.forEach((element) => {
+      createDraggable(element);
+    });
+  }
 });
 
 

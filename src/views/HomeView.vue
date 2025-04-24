@@ -4,11 +4,13 @@ import { onMounted } from 'vue';
 import { RouterLink } from 'vue-router'
 
 onMounted(() => {
-  // Make only the pixelFont divs draggable
-  const draggableElements = document.querySelectorAll('.window');
-  draggableElements.forEach((element) => {
-    createDraggable(element);
-  });
+  const isDesktop = window.innerWidth > 640; // Adjust breakpoint as needed
+  if (isDesktop) {
+    const draggableElements = document.querySelectorAll('.window');
+    draggableElements.forEach((element) => {
+      createDraggable(element);
+    });
+  }
 });
 </script>
 
