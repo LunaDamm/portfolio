@@ -31,7 +31,7 @@
           <p class="pt-2">
             {{ project.date }}
           </p>
-          <a :href="project.link" class="pt-2">{{ project.link }}</a>
+          <a :href="project.link" class="pt-2 !-m-0.5">view {{ project.type }}</a>
           <p class="pt-2">Made by {{ project.group }}, using:</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center pt-2">
             <div v-for="(technology, index) in combinedTechnologies" :key="index"
