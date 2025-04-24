@@ -34,6 +34,7 @@ onMounted(() => {
         <RouterLink to="/about" class="items-center justify-center flex flex-col">
           <font-awesome-icon icon="fa-solid fa-folder" class="text-5xl" />
           <p class="text-1xl">about</p>
+
         </RouterLink>
       </div>
     </section>
