@@ -92,7 +92,7 @@ export const useProjectsDatabase = () => {
         'Commercial project for EASV, showing the school and its facilities. Music and audio was created by us in Logic Pro and edited in Final Cut Pro.',
       date: '2025-02-16',
       group: 'Team Skærebært - Emilie, Mathias, Mikkel & Luna',
-      technologies: ['Final Cut Pro, Logic Pro'],
+      technologies: ['Final Cut Pro', 'Logic Pro'],
       technologiesIcons: ['/icons/final_cut_pro.png', '/icons/logic_pro.png'],
       link: 'https://www.youtube.com/watch?v=kml0o7itwdk',
     },

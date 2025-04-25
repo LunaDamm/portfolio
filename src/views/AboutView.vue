@@ -30,10 +30,14 @@
       </div>
       <div class="p-4 pt-4">
         <img src="../components/image/mini_mii.png" alt="" class="" />
-        <a href="https://www.youtube.com/watch?v=NBe3IBCMDoc" class="!text-dark-blue">
+        <a href="/cv/cv.pdf" target="_blank" class="!text-dark-blue">
           <button
             class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mt-4 pixelFont">view
-            cv</button></a>
+            cv.pdf</button></a>
+        <a href="https://youtu.be/NBe3IBCMDoc" target="_blank" class="!text-dark-blue">
+          <button
+            class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mt-4 pixelFont">view
+            cv.mp4</button></a>
       </div>
     </section>
   </main>

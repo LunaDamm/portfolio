@@ -50,10 +50,10 @@ onMounted(() => {
       </div>
       <p class="p-4 pt-4">Check me out on other social medias and støffz</p>
       <div class="pb-3 flex justify-end px-4">
-        <a href="https://www.linkedin.com/in/lunadamm/" class="!text-dark-blue">
+        <a href="https://www.linkedin.com/in/lunadamm/" target="_blank" class="!text-dark-blue">
           <button
             class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">linkedin</button></a>
-        <a href="https://www.youtube.com/watch?v=NBe3IBCMDoc" class="!text-dark-blue">
+        <a href="https://www.youtube.com/watch?v=NBe3IBCMDoc" target="_blank" class="!text-dark-blue">
           <button
             class="bg-almost-white rounded-2xl border-3 border-dark-blue hover:text-almost-white hover:bg-dark-blue cursor-pointer px-3 py-1 !mx-1 pixelFont">youtube</button></a>
       </div>
